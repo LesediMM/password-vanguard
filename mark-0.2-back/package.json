@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "start": "concurrently \"npm run serve-back\" \"npm run serve-front\"",
+        "start": "node index.js",
         "serve-back": "node index.js",
         "serve-front": "npm start --prefix ../mark-0.2-front"
     },
