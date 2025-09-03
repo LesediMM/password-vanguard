@@ -13,3 +13,6 @@ yarn-error.log*
 
 # Optional build directory
 dist
+
+# Production build
+build
