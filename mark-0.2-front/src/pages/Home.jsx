@@ -85,7 +85,7 @@ export default function Home() {
   useEffect(() => {
     // ✅ Dynamically set the API URL based on the environment
     const API_URL = process.env.NODE_ENV === 'production' 
-      ? 'https://password-vanguard-api.onrender.com' // Placeholder for the live backend
+      ? 'https://password-vanguard-api.onrender.com'
       : 'http://localhost:5000';
 
     // Ping the backend for status
@@ -175,3 +175,4 @@ export default function Home() {
     </div>
   );
 }
+

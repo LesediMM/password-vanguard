@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Register() {
   const [form, setForm] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
+  const navigate = useNavigate(); // Added for potential future use
 
   // This effect sets the body style on component mount
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function Register() {
 
     // ✅ Dynamically set the API URL based on the environment
     const API_URL = process.env.NODE_ENV === 'production' 
-      ? 'https://password-vanguard-api.onrender.com' // Placeholder for the live backend
+      ? 'https://password-vanguard-api.onrender.com'
       : 'http://localhost:5000';
 
     try {
@@ -106,3 +107,4 @@ export default function Register() {
     </div>
   );
 }
+
